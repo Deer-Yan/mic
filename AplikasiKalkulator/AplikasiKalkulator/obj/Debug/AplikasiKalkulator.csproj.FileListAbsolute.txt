@@ -1,0 +1,10 @@
+C:\Users\smkan13 bandung\source\repos\AplikasiKalkulator\AplikasiKalkulator\obj\Debug\AplikasiKalkulator.csproj.AssemblyReference.cache
+C:\Users\smkan13 bandung\source\repos\AplikasiKalkulator\AplikasiKalkulator\obj\Debug\AplikasiKalkulator.Form1.resources
+C:\Users\smkan13 bandung\source\repos\AplikasiKalkulator\AplikasiKalkulator\obj\Debug\AplikasiKalkulator.Properties.Resources.resources
+C:\Users\smkan13 bandung\source\repos\AplikasiKalkulator\AplikasiKalkulator\obj\Debug\AplikasiKalkulator.csproj.GenerateResource.cache
+C:\Users\smkan13 bandung\source\repos\AplikasiKalkulator\AplikasiKalkulator\obj\Debug\AplikasiKalkulator.csproj.CoreCompileInputs.cache
+C:\Users\smkan13 bandung\source\repos\AplikasiKalkulator\AplikasiKalkulator\bin\Debug\AplikasiKalkulator.exe.config
+C:\Users\smkan13 bandung\source\repos\AplikasiKalkulator\AplikasiKalkulator\bin\Debug\AplikasiKalkulator.exe
+C:\Users\smkan13 bandung\source\repos\AplikasiKalkulator\AplikasiKalkulator\bin\Debug\AplikasiKalkulator.pdb
+C:\Users\smkan13 bandung\source\repos\AplikasiKalkulator\AplikasiKalkulator\obj\Debug\AplikasiKalkulator.exe
+C:\Users\smkan13 bandung\source\repos\AplikasiKalkulator\AplikasiKalkulator\obj\Debug\AplikasiKalkulator.pdb
