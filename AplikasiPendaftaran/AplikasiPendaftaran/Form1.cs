@@ -1,0 +1,109 @@
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace AplikasiPendaftaran
+{
+    public partial class Form1 : Form
+    {
+        // Deklarasi Tools
+        private TextBox txtNisn, txtNama, txtTempatLahir, txtAlamat, txtTelepon, txtEmail;
+        private DateTimePicker dtpLahir;
+        private RadioButton rbLaki, rbPerempuan;
+        private Button btnSimpan, btnHapus, btnBatal;
+        private Label lblStatus;
+
+        public Form1()
+        {
+            this.Text = "Input Data Siswa v1.0";
+            this.Size = new Size(500, 550);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.BackColor = Color.FromArgb(240, 240, 240); // Abu-abu sangat muda
+            InisialisasiKomponenManual();
+        }
+
+        private void InisialisasiKomponenManual()
+        {
+            // HEADER
+            Label lblJudul = new Label()
+            {
+                Text = "INPUT DATA SISWA",
+                Font = new Font("Arial", 18, FontStyle.Bold),
+                ForeColor = Color.DarkGreen,
+                Location = new Point(0, 20),
+                Size = new Size(500, 40),
+                TextAlign = ContentAlignment.MiddleCenter
+            };
+
+            // Font Standar
+            Font fontLabel = new Font("Arial", 11);
+
+            // Baris 1: NISN
+            Label lblNisn = new Label() { Text = "NISN:", Location = new Point(30, 80), Font = fontLabel, AutoSize = true };
+            txtNisn = new TextBox() { Location = new Point(180, 77), Width = 250, Font = fontLabel };
+
+            // Baris 2: Nama Lengkap
+            Label lblNama = new Label() { Text = "Nama Lengkap:", Location = new Point(30, 115), Font = fontLabel, AutoSize = true };
+            txtNama = new TextBox() { Location = new Point(180, 112), Width = 250, Font = fontLabel };
+
+            // Baris 3: Tempat Lahir
+            Label lblTempat = new Label() { Text = "Tempat Lahir:", Location = new Point(30, 150), Font = fontLabel, AutoSize = true };
+            txtTempatLahir = new TextBox() { Location = new Point(180, 147), Width = 250, Font = fontLabel };
+
+            // Baris 4: Tanggal Lahir
+            Label lblTgl = new Label() { Text = "Tanggal Lahir:", Location = new Point(30, 185), Font = fontLabel, AutoSize = true };
+            dtpLahir = new DateTimePicker() { Location = new Point(180, 182), Width = 250, CustomFormat = "dd/MM/yyyy", Format = DateTimePickerFormat.Custom };
+
+            // Baris 5: Jenis Kelamin
+            Label lblGender = new Label() { Text = "Jenis Kelamin:", Location = new Point(30, 220), Font = fontLabel, AutoSize = true };
+            rbLaki = new RadioButton() { Text = "Laki-laki", Location = new Point(180, 218), Font = fontLabel, AutoSize = true, Checked = true };
+            rbPerempuan = new RadioButton() { Text = "Perempuan", Location = new Point(280, 218), Font = fontLabel, AutoSize = true };
+
+            // Baris 6: Alamat
+            Label lblAlamat = new Label() { Text = "Alamat:", Location = new Point(30, 255), Font = fontLabel, AutoSize = true };
+            txtAlamat = new TextBox() { Location = new Point(180, 252), Width = 250, Font = fontLabel };
+
+            // Baris 7: No Telepon & Email
+            Label lblTelp = new Label() { Text = "No. Telepon:", Location = new Point(30, 290), Font = fontLabel, AutoSize = true };
+            txtTelepon = new TextBox() { Location = new Point(130, 287), Width = 100, Font = fontLabel };
+            Label lblEmail = new Label() { Text = "Email:", Location = new Point(245, 290), Font = fontLabel, AutoSize = true };
+            txtEmail = new TextBox() { Location = new Point(300, 287), Width = 130, Font = fontLabel };
+
+            // TOMBOL-TOMBOL
+            btnSimpan = new Button() { Text = "💾 Simpan", Location = new Point(50, 350), Width = 110, Height = 45, BackColor = Color.LightGray };
+            btnHapus = new Button() { Text = "🗑️ Hapus", Location = new Point(180, 350), Width = 110, Height = 45, BackColor = Color.LightGray };
+            btnBatal = new Button() { Text = "❌ Batal", Location = new Point(310, 350), Width = 110, Height = 45, BackColor = Color.LightGray };
+
+            // STATUS
+            lblStatus = new Label()
+            {
+                Text = "STATUS: Menunggu Input...",
+                Location = new Point(30, 420),
+                Font = new Font("Arial", 12),
+                AutoSize = true
+            };
+
+            // Event Handling
+            btnSimpan.Click += (s, e) => { lblStatus.Text = "STATUS: Data Berhasil Disimpan!"; MessageBox.Show("Data " + txtNama.Text + " telah masuk database."); };
+            btnBatal.Click += (s, e) => this.Close();
+            btnHapus.Click += (s, e) => {
+                txtNisn.Clear(); txtNama.Clear(); txtTempatLahir.Clear();
+                txtAlamat.Clear(); txtTelepon.Clear(); txtEmail.Clear();
+                lblStatus.Text = "STATUS: Form Dikosongkan.";
+            };
+
+            // Tambahkan ke Form
+            this.Controls.Add(lblJudul);
+            this.Controls.Add(lblNisn); this.Controls.Add(txtNisn);
+            this.Controls.Add(lblNama); this.Controls.Add(txtNama);
+            this.Controls.Add(lblTempat); this.Controls.Add(txtTempatLahir);
+            this.Controls.Add(lblTgl); this.Controls.Add(dtpLahir);
+            this.Controls.Add(lblGender); this.Controls.Add(rbLaki); this.Controls.Add(rbPerempuan);
+            this.Controls.Add(lblAlamat); this.Controls.Add(txtAlamat);
+            this.Controls.Add(lblTelp); this.Controls.Add(txtTelepon);
+            this.Controls.Add(lblEmail); this.Controls.Add(txtEmail);
+            this.Controls.Add(btnSimpan); this.Controls.Add(btnHapus); this.Controls.Add(btnBatal);
+            this.Controls.Add(lblStatus);
+        }
+    }
+}

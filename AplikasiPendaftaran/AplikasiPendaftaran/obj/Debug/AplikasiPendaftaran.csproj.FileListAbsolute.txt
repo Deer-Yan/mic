@@ -1,0 +1,10 @@
+C:\Users\smkan13 bandung\source\repos\AplikasiPendaftaran\AplikasiPendaftaran\obj\Debug\AplikasiPendaftaran.csproj.AssemblyReference.cache
+C:\Users\smkan13 bandung\source\repos\AplikasiPendaftaran\AplikasiPendaftaran\obj\Debug\AplikasiPendaftaran.Form1.resources
+C:\Users\smkan13 bandung\source\repos\AplikasiPendaftaran\AplikasiPendaftaran\obj\Debug\AplikasiPendaftaran.Properties.Resources.resources
+C:\Users\smkan13 bandung\source\repos\AplikasiPendaftaran\AplikasiPendaftaran\obj\Debug\AplikasiPendaftaran.csproj.GenerateResource.cache
+C:\Users\smkan13 bandung\source\repos\AplikasiPendaftaran\AplikasiPendaftaran\obj\Debug\AplikasiPendaftaran.csproj.CoreCompileInputs.cache
+C:\Users\smkan13 bandung\source\repos\AplikasiPendaftaran\AplikasiPendaftaran\bin\Debug\AplikasiPendaftaran.exe.config
+C:\Users\smkan13 bandung\source\repos\AplikasiPendaftaran\AplikasiPendaftaran\bin\Debug\AplikasiPendaftaran.exe
+C:\Users\smkan13 bandung\source\repos\AplikasiPendaftaran\AplikasiPendaftaran\bin\Debug\AplikasiPendaftaran.pdb
+C:\Users\smkan13 bandung\source\repos\AplikasiPendaftaran\AplikasiPendaftaran\obj\Debug\AplikasiPendaftaran.exe
+C:\Users\smkan13 bandung\source\repos\AplikasiPendaftaran\AplikasiPendaftaran\obj\Debug\AplikasiPendaftaran.pdb

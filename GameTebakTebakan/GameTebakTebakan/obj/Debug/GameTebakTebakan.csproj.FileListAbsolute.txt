@@ -1,0 +1,10 @@
+C:\Users\smkan13 bandung\source\repos\GameTebakTebakan\GameTebakTebakan\obj\Debug\GameTebakTebakan.csproj.AssemblyReference.cache
+C:\Users\smkan13 bandung\source\repos\GameTebakTebakan\GameTebakTebakan\obj\Debug\GameTebakTebakan.Form1.resources
+C:\Users\smkan13 bandung\source\repos\GameTebakTebakan\GameTebakTebakan\obj\Debug\GameTebakTebakan.Properties.Resources.resources
+C:\Users\smkan13 bandung\source\repos\GameTebakTebakan\GameTebakTebakan\obj\Debug\GameTebakTebakan.csproj.GenerateResource.cache
+C:\Users\smkan13 bandung\source\repos\GameTebakTebakan\GameTebakTebakan\obj\Debug\GameTebakTebakan.csproj.CoreCompileInputs.cache
+C:\Users\smkan13 bandung\source\repos\GameTebakTebakan\GameTebakTebakan\bin\Debug\GameTebakTebakan.exe.config
+C:\Users\smkan13 bandung\source\repos\GameTebakTebakan\GameTebakTebakan\bin\Debug\GameTebakTebakan.exe
+C:\Users\smkan13 bandung\source\repos\GameTebakTebakan\GameTebakTebakan\bin\Debug\GameTebakTebakan.pdb
+C:\Users\smkan13 bandung\source\repos\GameTebakTebakan\GameTebakTebakan\obj\Debug\GameTebakTebakan.exe
+C:\Users\smkan13 bandung\source\repos\GameTebakTebakan\GameTebakTebakan\obj\Debug\GameTebakTebakan.pdb
