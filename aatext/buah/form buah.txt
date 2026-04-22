@@ -1,0 +1,130 @@
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace GameTebakTebakan
+{
+    public partial class Form1 : Form
+    {
+        // Deklarasi Tools
+        private TextBox txtPetunjuk1, txtPetunjuk2, txtPetunjuk3, txtJawaban;
+        private RadioButton rbBuah, rbSayur;
+        private Button btnPetunjuk, btnHapus, btnCek;
+        private Label lblStatus;
+
+        public Form1()
+        {
+            this.Text = "Tebak-tebakan Buah & Sayur v1.0";
+            this.Size = new Size(500, 550);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.BackColor = Color.FromArgb(240, 240, 240);
+            InisialisasiGame();
+        }
+
+        private void InisialisasiGame()
+        {
+            // HEADER
+            Label lblJudul = new Label()
+            {
+                Text = "TEBAK-TEBAKAN BUAH & SAYUR",
+                Font = new Font("Arial", 16, FontStyle.Bold),
+                ForeColor = Color.DarkGreen,
+                Location = new Point(0, 20),
+                Size = new Size(500, 40),
+                TextAlign = ContentAlignment.MiddleCenter
+            };
+
+            Font fontLabel = new Font("Arial", 11);
+
+            // Baris 1: Petunjuk 1
+            Label lblP1 = new Label() { Text = "Petunjuk 1 (Warna):", Location = new Point(30, 80), Font = fontLabel, AutoSize = true };
+            txtPetunjuk1 = new TextBox() { Location = new Point(180, 77), Width = 250, Font = fontLabel };
+
+            // Baris 2: Petunjuk 2
+            Label lblP2 = new Label() { Text = "Petunjuk 2 (Bentuk):", Location = new Point(30, 115), Font = fontLabel, AutoSize = true };
+            txtPetunjuk2 = new TextBox() { Location = new Point(180, 112), Width = 250, Font = fontLabel };
+
+            // Baris 3: Petunjuk 3 (Di foto labelnya terulang Petunjuk 2)
+            Label lblP3 = new Label() { Text = "Petunjuk 3 (Rasa):", Location = new Point(30, 150), Font = fontLabel, AutoSize = true };
+            txtPetunjuk3 = new TextBox() { Location = new Point(180, 147), Width = 250, Font = fontLabel };
+
+            // Baris 4: Jawaban
+            Label lblJawab = new Label() { Text = "Jawaban Anda:", Location = new Point(30, 185), Font = fontLabel, AutoSize = true };
+            txtJawaban = new TextBox() { Location = new Point(180, 182), Width = 250, Font = fontLabel };
+
+            // Baris 5: Jenis Tanaman
+            Label lblJenis = new Label() { Text = "Jenis Tanaman:", Location = new Point(30, 220), Font = fontLabel, AutoSize = true };
+            rbBuah = new RadioButton() { Text = "Buah", Location = new Point(180, 218), Font = fontLabel, AutoSize = true, Checked = true };
+            rbSayur = new RadioButton() { Text = "Sayur", Location = new Point(280, 218), Font = fontLabel, AutoSize = true };
+
+            // TOMBOL-TOMBOL
+            btnPetunjuk = new Button() { Text = "🔍 Petunjuk", Location = new Point(40, 300), Width = 120, Height = 45 };
+            btnHapus = new Button() { Text = "🗑️ Hapus", Location = new Point(180, 300), Width = 120, Height = 45 };
+            btnCek = new Button() { Text = "✔️ Cek", Location = new Point(320, 300), Width = 120, Height = 45 };
+
+            // STATUS
+            lblStatus = new Label()
+            {
+                Text = "STATUS: Menunggu Input...",
+                Location = new Point(30, 370),
+                Font = new Font("Arial", 14),
+                AutoSize = true
+            };
+
+            // Event Handlers
+            btnPetunjuk.Click += (s, e) => {
+                // Memberikan isi ke dalam TextBox petunjuk saat tombol diklik
+                txtPetunjuk1.Text = "Merah";
+                txtPetunjuk2.Text = "Bulat";
+                txtPetunjuk3.Text = "Manis, Renyah";
+
+                lblStatus.Text = "STATUS: Petunjuk telah diberikan!";
+                lblStatus.ForeColor = Color.DarkGreen;
+            };
+            // --------------------------
+
+            btnCek.Click += (s, e) => {
+                // .Trim() berfungsi untuk menghapus spasi yang tidak sengaja terketik di depan/belakang
+                string jawabanUser = txtJawaban.Text.Trim().ToLower();
+
+                // Validasi jika kotak jawaban masih kosong
+                if (string.IsNullOrEmpty(jawabanUser))
+                {
+                    MessageBox.Show("Silahkan isi jawaban Anda terlebih dahulu!");
+                    return;
+                }
+
+                // Logika Pengecekan
+                // Kita cek jika jawabannya 'apel' DAN user memilih RadioButton 'Buah'
+                if (jawabanUser == "apel" && rbBuah.Checked)
+                {
+                    lblStatus.Text = "STATUS: Benar! Itu adalah Apel (Buah).";
+                    lblStatus.ForeColor = Color.Blue;
+                    MessageBox.Show("Selamat! Jawaban Anda Tepat.", "Hasil");
+                }
+                else
+                {
+                    lblStatus.Text = "STATUS: Salah, coba lagi!";
+                    lblStatus.ForeColor = Color.Red;
+                    MessageBox.Show("Maaf, jawaban atau jenis tanaman salah.", "Hasil");
+                }
+            };
+
+            btnHapus.Click += (s, e) => {
+                txtPetunjuk1.Clear(); txtPetunjuk2.Clear(); txtPetunjuk3.Clear(); txtJawaban.Clear();
+                lblStatus.Text = "STATUS: Menunggu Input...";
+                lblStatus.ForeColor = Color.Black;
+            };
+
+            // Tambah ke Form
+            this.Controls.Add(lblJudul);
+            this.Controls.Add(lblP1); this.Controls.Add(txtPetunjuk1);
+            this.Controls.Add(lblP2); this.Controls.Add(txtPetunjuk2);
+            this.Controls.Add(lblP3); this.Controls.Add(txtPetunjuk3);
+            this.Controls.Add(lblJawab); this.Controls.Add(txtJawaban);
+            this.Controls.Add(lblJenis); this.Controls.Add(rbBuah); this.Controls.Add(rbSayur);
+            this.Controls.Add(btnPetunjuk); this.Controls.Add(btnHapus); this.Controls.Add(btnCek);
+            this.Controls.Add(lblStatus);
+        }
+    }
+}
